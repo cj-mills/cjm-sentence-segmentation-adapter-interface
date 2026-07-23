@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cjm-sentence-segmentation-adapter-interface"
+dynamic = ["version"]
+description = "Typed sentence-segmentation task-adapter interface — SentenceSegmentationAdapter ABC + GenericSentenceSegmentationAdapter (thin pass-through around a pure-compute segmenter tool) and the SentenceSegmentationToolProtocol. The SentenceSegmentationResult data noun lives in cjm-capability-primitives."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "Apache-2.0"}
+authors = [{name = "Christian J. Mills", email = "9126128+cj-mills@users.noreply.github.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = [
+    "cjm-substrate>=0.0.58",
+    "cjm-capability-primitives>=0.0.11",
+]
+
+[project.urls]
+Repository = "https://github.com/cj-mills/cjm-sentence-segmentation-adapter-interface"
+
+[tool.setuptools.dynamic]
+version = {attr = "cjm_sentence_segmentation_adapter_interface.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["cjm_sentence_segmentation_adapter_interface*"]
