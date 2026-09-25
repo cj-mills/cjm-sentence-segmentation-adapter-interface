@@ -6,7 +6,7 @@ Typed sentence-segmentation task-adapter interface for the cjm-substrate runtime
 
 ## Modules
 
-- **`cjm_sentence_segmentation_adapter_interface`**
+- **`cjm_sentence_segmentation_adapter_interface.__init__`**
 - **`cjm_sentence_segmentation_adapter_interface.adapter`** — The typed sentence-segmentation task contract — the `SentenceSegmentationAdapter` ABC + the `SentenceSegmentationToolProtocol` structural contract (capability-unit Option C; B.5 work item 81e43606).
 - **`cjm_sentence_segmentation_adapter_interface.generic`** — The generic (tool-agnostic) sentence-segmentation adapter — a thin typed pass-through to the bound tool's pure-compute `segment_text`. Reused across every tool capability satisfying `SentenceSegmentationToolProtocol`, exactly as `GenericVADAdapter` is reused across VAD tools.
 
