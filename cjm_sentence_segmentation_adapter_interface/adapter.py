@@ -20,6 +20,7 @@ class SentenceSegmentationToolProtocol(Protocol):
     returns ordered character spans over it. `get_current_config` supplies the
     effective config whose canonical hash joins downstream identity composites
     (the decomp skeleton hash)."""
+
     def segment_text(self, text: str, **kwargs) -> SentenceSegmentationResult: ...
     def get_current_config(self) -> Dict[str, Any]: ...
 
