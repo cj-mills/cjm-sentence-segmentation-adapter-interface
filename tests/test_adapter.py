@@ -1,12 +1,11 @@
 """Tests for the sentence-segmentation adapter interface — protocol conformance + the generic pass-through."""
+
 from typing import Any, Dict
 
-from cjm_capability_primitives.sentence_segmentation import (SentenceSegmentationResult,
-                                                             SentenceSpan)
-from cjm_sentence_segmentation_adapter_interface.adapter import (
-    SentenceSegmentationAdapter, SentenceSegmentationToolProtocol)
-from cjm_sentence_segmentation_adapter_interface.generic import (
-    GenericSentenceSegmentationAdapter)
+from cjm_capability_primitives.sentence_segmentation import SentenceSegmentationResult, SentenceSpan
+from cjm_sentence_segmentation_adapter_interface.adapter import (SentenceSegmentationAdapter,
+                                                                 SentenceSegmentationToolProtocol)
+from cjm_sentence_segmentation_adapter_interface.generic import GenericSentenceSegmentationAdapter
 
 
 class FakeSegmenterTool:
